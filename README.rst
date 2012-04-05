@@ -31,7 +31,7 @@ INSTALLED_APPS in your settings.py::
         # ...
 
         'django.contrib.staticfiles',
-        'django_extjs4',
+        'extjs4',
 
         # ...
     )
@@ -43,7 +43,8 @@ documentation to configure and deploy static files.
 What parts of ExtJS is included?
 --------------------------------
 
-The ExtJS sources, except for the ``examples/`` and ``docs/`` directories.
+The ExtJS sources, except for the ``examples/`` and ``docs/`` directories is
+included in ``extjs4/static/extjs4/``.
 
 
 Usage
