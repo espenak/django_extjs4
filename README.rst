@@ -1,6 +1,11 @@
 Django Extjs4
 =============
 
+ExtJS version
+=============
+
+The current version of ExtJS distributed with this app is **4.0.7**.
+
 
 Requirements
 ------------
@@ -33,6 +38,12 @@ INSTALLED_APPS in your settings.py::
 
 Refer to Django `static files <https://docs.djangoproject.com/en/dev/howto/static-files/>`_
 documentation to configure and deploy static files.
+
+
+What parts of ExtJS is included?
+--------------------------------
+
+The ExtJS sources, except for the ``examples/`` and ``docs/`` directories.
 
 
 Usage
