@@ -47,7 +47,7 @@ setup(name = 'django_extjs4',
                    'Environment :: Web Environment',
                    'Framework :: Django',
                    'Intended Audience :: Developers',
-                   'License :: OSI Approved :: GPL',
+                   'License :: OSI Approved',
                    'Operating System :: OS Independent',
                    'Programming Language :: Python'
                   ],
