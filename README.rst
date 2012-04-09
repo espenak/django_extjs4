@@ -1,5 +1,6 @@
+#############
 Django Extjs4
-=============
+#############
 
 ExtJS version
 =============
@@ -50,6 +51,7 @@ included in ``extjs4/static/extjs4/``.
 Usage
 -----
 
-You can refer to extjs4 in your template with::
+See `django_extjs4_examples`_.
 
-    {% static "/extjs4/ext-all-dev.js %}
+
+.. _`django_extjs4_examples`: https://github.com/espenak/django_extjs4_examples
