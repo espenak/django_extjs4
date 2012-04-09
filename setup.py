@@ -1,6 +1,5 @@
 from os.path import join, dirname
 from setuptools import setup, find_packages
-from os import walk, chdir, getcwd
 
 this_dir = dirname(__file__)
 
@@ -12,25 +11,6 @@ except IOError:
     long_description = None
 
 
-def _find_all_files(root, subdir):
-    all_filenames = []
-    cwd = getcwd()
-    chdir(root)
-    for dirpath, dirnames, filenames in walk(subdir):
-        for filename in filenames:
-            all_filenames.append(join(dirpath, filename))
-    chdir(cwd)
-    return all_filenames
-
-def find_all_files(root, *subdirs):
-    all_filenames = []
-    for subdir in subdirs:
-        all_filenames += _find_all_files(root, subdir)
-    return all_filenames
-
-
-
-
 setup(name = 'django_extjs4',
       description = 'Packages extjs as a Django app.',
       license='GPL',
@@ -40,7 +20,7 @@ setup(name = 'django_extjs4',
       long_description=long_description,
       packages=find_packages(exclude=['ez_setup']),
       install_requires = ['setuptools', 'Django'],
-      package_data = {'extjs4': find_all_files(join(this_dir, 'extjs4'), 'static')},
+      include_package_data=True,
       zip_safe=False,
       classifiers=[
                    'Development Status :: 5 - Production/Stable',
@@ -50,5 +30,5 @@ setup(name = 'django_extjs4',
                    'License :: OSI Approved',
                    'Operating System :: OS Independent',
                    'Programming Language :: Python'
-                  ],
+                  ]
      )
