@@ -7,6 +7,13 @@ ExtJS version
 
 The current version of ExtJS distributed with this app is **4.0.7**.
 
+Issues/contribute
+=================
+
+Report any issues at the `github project page <django_extjs4>`_, and feel free
+to add your own guides/experiences to the wiki, and to contribute changes using
+pull requests.
+
 
 Requirements
 ============
@@ -72,3 +79,4 @@ See `django_extjs4_examples`_.
 
 
 .. _`django_extjs4_examples`: https://github.com/espenak/django_extjs4_examples
+.. _`django_extjs4`: https://github.com/espenak/django_extjs4
