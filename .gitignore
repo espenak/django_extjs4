@@ -8,4 +8,4 @@
 .DS_Store
 .sass-cache/
 *.egg-info/
-build/
+dist/
