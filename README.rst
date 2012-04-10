@@ -52,6 +52,12 @@ Django test server, since setting ``DEBUG`` to ``True`` disables
 ``EXTJS4_DEBUG`` in ``settings.py``, it defaults to ``False``.
 
 
+A generic view
+==============
+
+See ``generic_extjs4_app`` in `django_extjs4_examples`_ for how-to use ``extjs4.views.Extjs4AppView``.
+
+
 What parts of ExtJS is included?
 ================================
 

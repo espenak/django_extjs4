@@ -1,0 +1,22 @@
+{% load staticfiles %}
+
+<html>
+    <head>
+        {% block head %}
+            <title>{{ title }}</title>
+        {% endblock %}
+
+        {% block css %}
+            <link rel="stylesheet" type="text/css"
+                href="{% block cssurl %}{% static css_staticpath %}{% endblock %}">
+        {% endblock %}
+        {% if EXTJS4_DEBUG %}
+            <script type="text/javascript" src="{% static "extjs4/ext-debug.js" %}"></script>
+            <script type="text/javascript" src="{% static "minimal_extjs4_app/app.js" %}"></script>
+        {% else %}
+            <script type="text/javascript" src="{% static "extjs4/ext.js" %}"></script>
+            <script type="text/javascript" src="{% static "minimal_extjs4_app/app-all.js" %}"></script>
+        {% endif %}
+    </head>
+    <body></body>
+</html>
