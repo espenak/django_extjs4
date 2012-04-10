@@ -14,7 +14,7 @@ except IOError:
 setup(name = 'django_extjs4',
       description = 'Packages extjs as a Django app.',
       license='GPL',
-      version = '1.0',
+      version = '1.0.1',
       url = 'http://github.com/espenak/django_extjs4',
       author = 'Espen Angell Kristiansen',
       long_description=long_description,

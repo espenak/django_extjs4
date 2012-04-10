@@ -1,6 +1,6 @@
-#############
-Django Extjs4
-#############
+######################################
+Extjs4 sources bundled as a Django app
+######################################
 
 ExtJS version
 =============
@@ -39,6 +39,17 @@ INSTALLED_APPS in your settings.py::
 
 Refer to Django `static files <https://docs.djangoproject.com/en/dev/howto/static-files/>`_
 documentation to configure and deploy static files.
+
+
+Template context
+================
+
+The ``extjs4.context_processors.extjs4`` template context adds exports the
+``EXTJS4_DEBUG`` attribute from ``settings.py`` to your Django templates.  This
+is useful if you want to be able to test your production ExtJS app on the
+Django test server, since setting ``DEBUG`` to ``True`` disables
+``staticfiles``. If you add the template context, but do not set
+``EXTJS4_DEBUG`` in ``settings.py``, it defaults to ``False``.
 
 
 What parts of ExtJS is included?
