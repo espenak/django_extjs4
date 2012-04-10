@@ -12,10 +12,10 @@
         {% endblock %}
         {% if EXTJS4_DEBUG %}
             <script type="text/javascript" src="{% static "extjs4/ext-debug.js" %}"></script>
-            <script type="text/javascript" src="{% static "minimal_extjs4_app/app.js" %}"></script>
+            <script type="text/javascript" src="{% static app_staticpath %}"></script>
         {% else %}
             <script type="text/javascript" src="{% static "extjs4/ext.js" %}"></script>
-            <script type="text/javascript" src="{% static "minimal_extjs4_app/app-all.js" %}"></script>
+            <script type="text/javascript" src="{% static appall_staticpath %}"></script>
         {% endif %}
     </head>
     <body></body>
