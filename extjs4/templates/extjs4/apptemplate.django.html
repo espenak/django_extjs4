@@ -11,15 +11,21 @@
                 href="{% block cssurl %}{% static css_staticpath %}{% endblock %}" />
         {% endblock %}
 
-        {% block pre_app_and_extjs %}{% endblock %}
-        {% if EXTJS4_DEBUG %}
-            <script type="text/javascript" src="{% static "extjs4/ext-debug.js" %}"></script>
-            <script type="text/javascript" src="{% static app_staticpath %}"></script>
-        {% else %}
-            <script type="text/javascript" src="{% static "extjs4/ext.js" %}"></script>
-            <script type="text/javascript" src="{% static appall_staticpath %}"></script>
-        {% endif %}
-        {% block post_app_and_extjs %}{% endblock %}
+        {% block extjs %}
+            {% if EXTJS4_DEBUG %}
+                <script type="text/javascript" src="{% static "extjs4/ext-debug.js" %}"></script>
+            {% else %}
+                <script type="text/javascript" src="{% static "extjs4/ext.js" %}"></script>
+            {% endif %}
+        {% endblock %}
+
+        {% block app %}
+            {% if EXTJS4_DEBUG %}
+                <script type="text/javascript" src="{% static app_staticpath %}"></script>
+            {% else %}
+                <script type="text/javascript" src="{% static appall_staticpath %}"></script>
+            {% endif %}
+        {% endblock %}
     </head>
     <body></body>
 </html>
