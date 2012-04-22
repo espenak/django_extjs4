@@ -1,5 +1,6 @@
 from os.path import join, dirname
 from setuptools import setup, find_packages
+from extjs4 import version
 
 this_dir = dirname(__file__)
 
@@ -14,11 +15,11 @@ except IOError:
 setup(name = 'django_extjs4',
       description = 'Packages extjs as a Django app.',
       license='GPL',
-      version = '1.0.1',
+      version = version,
       url = 'http://github.com/espenak/django_extjs4',
       author = 'Espen Angell Kristiansen',
       long_description=long_description,
-      packages=find_packages(exclude=['ez_setup']),
+      packages=find_packages(exclude=['ez_setup', 'fabfile']),
       install_requires = ['setuptools', 'Django'],
       include_package_data=True,
       zip_safe=False,
