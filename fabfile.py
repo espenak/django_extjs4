@@ -17,9 +17,14 @@ def pypi_update():
     local('python setup.py sdist upload')
 
 @task
+def push_tags():
+    local('git push --tags')
+
+@task
 def release():
     """
-    Runs ``versiontag`` and ``pypi_update``.
+    Runs ``versiontag`` ``push_tags`` and ``pypi_update``.
     """
     versiontag()
+    push_tags()
     pypi_update()
