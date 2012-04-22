@@ -1,15 +1,5 @@
-from os.path import join, dirname
 from setuptools import setup, find_packages
 from extjs4 import version
-
-this_dir = dirname(__file__)
-
-try:
-    f = open(join(this_dir, 'README.rst'))
-    long_description = f.read().strip()
-    f.close()
-except IOError:
-    long_description = None
 
 
 setup(name = 'django_extjs4',
@@ -18,7 +8,7 @@ setup(name = 'django_extjs4',
       version = version,
       url = 'http://github.com/espenak/django_extjs4',
       author = 'Espen Angell Kristiansen',
-      long_description=long_description,
+      long_description=open('README.rst').read(),
       packages=find_packages(exclude=['ez_setup', 'fabfile']),
       install_requires = ['setuptools', 'Django'],
       include_package_data=True,
