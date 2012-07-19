@@ -8,6 +8,9 @@ Versions
 - ``1.0.5``: ExtJS 4.0.7
 - ``1.1.0_extjs4.1.1``: ExtJS 4.1.1 (from this version on, the extjs version is suffixed to all versions)
 
+All versions are tagged in the GIT repo, and second-level versions (4.0.x,
+4.1.x...) get their own branch when a new version is released.
+
 Issues/contribute
 =================
 
