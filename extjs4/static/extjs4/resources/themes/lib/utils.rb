@@ -60,6 +60,9 @@ module ExtJS4
             image_path = File.join(relative_path, theme, path)
           else
             images_path = File.join($ext_path, 'resources', 'themes', 'images', theme)
+            if $django_extjs4_images_dir # NOTE: This is a hack until ExtJS fixes custom theme image location bug
+              images_path = $django_extjs4_images_dir
+            end
             image_path = File.join(images_path, path)
           end
           
