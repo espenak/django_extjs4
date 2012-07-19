@@ -1,21 +1,27 @@
 /*
+This file is part of Ext JS 4.1
 
-This file is part of Ext JS 4
-
-Copyright (c) 2011 Sencha Inc
+Copyright (c) 2011-2012 Sencha Inc
 
 Contact:  http://www.sencha.com/contact
 
 GNU General Public License Usage
-This file may be used under the terms of the GNU General Public License version 3.0 as published by the Free Software Foundation and appearing in the file LICENSE included in the packaging of this file.  Please review the following information to ensure the GNU General Public License version 3.0 requirements will be met: http://www.gnu.org/copyleft/gpl.html.
+This file may be used under the terms of the GNU General Public License version 3.0 as
+published by the Free Software Foundation and appearing in the file LICENSE included in the
+packaging of this file.
 
-If you are unsure which license is appropriate for your use, please contact the sales department at http://www.sencha.com/contact.
+Please review the following information to ensure the GNU General Public License version 3.0
+requirements will be met: http://www.gnu.org/copyleft/gpl.html.
 
+If you are unsure which license is appropriate for your use, please contact the sales department
+at http://www.sencha.com/contact.
+
+Build date: 2012-07-04 21:11:01 (65ff594cd80b9bad45df640c22cc0adb52c95a7b)
 */
 /**
  * Load the library located at the same path with this file
  *
- * Will automatically load ext-all-debug.js if any of these conditions is true:
+ * Will automatically load ext-all-dev.js if any of these conditions is true:
  * - Current hostname is localhost
  * - Current hostname is an IP v4 address
  * - Current protocol is "file:"
@@ -23,7 +29,6 @@ If you are unsure which license is appropriate for your use, please contact the 
  * Will load ext-all.js (minified) otherwise
  */
 (function() {
-
     var scripts = document.getElementsByTagName('script'),
         localhostTests = [
             /^localhost$/,
@@ -67,7 +72,6 @@ If you are unsure which license is appropriate for your use, please contact the 
         isDevelopment = true;
     }
 
-    document.write('<script type="text/javascript" src="' + path + 'ext-all' + ((isDevelopment) ? '-debug' : '') + '.js"></script>');
-
+    document.write('<script type="text/javascript" charset="UTF-8" src="' + 
+        path + 'ext-all' + (isDevelopment ? '-dev' : '') + '.js"></script>');
 })();
-
