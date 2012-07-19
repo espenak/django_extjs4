@@ -2,10 +2,11 @@
 Extjs4 sources bundled as a Django app
 ######################################
 
-ExtJS version
+Versions
 =============
 
-The current version of ExtJS distributed with this app is **4.0.7**.
+- ``1.0.5``: ExtJS 4.0.7
+- ``1.1.0_extjs4.1.1``: ExtJS 4.1.1 (from this version on, the extjs version is suffixed to all versions)
 
 Issues/contribute
 =================
