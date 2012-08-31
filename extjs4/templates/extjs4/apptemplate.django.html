@@ -16,7 +16,12 @@
 
         {% block extjs %}
             {% if EXTJS4_DEBUG %}
-                <script type="text/javascript" src="{% static "extjs4/ext-debug.js" %}"></script>
+                <script type="text/javascript" src="{% static EXTJS4_DEBUGFILE %}"></script>
+                <script type="text/javascript">
+                    Ext.Loader.setConfig({
+                        enabled: true
+                    });
+                </script>
             {% else %}
                 <script type="text/javascript" src="{% static "extjs4/ext.js" %}"></script>
             {% endif %}

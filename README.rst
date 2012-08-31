@@ -56,11 +56,21 @@ Template context
 ================
 
 The ``extjs4.context_processors.extjs4`` template context adds exports the
-``EXTJS4_DEBUG`` attribute from ``settings.py`` to your Django templates.  This
-is useful if you want to be able to test your production ExtJS app on the
-Django test server, since setting ``DEBUG`` to ``True`` disables
-``staticfiles``. If you add the template context, but do not set
-``EXTJS4_DEBUG`` in ``settings.py``, it defaults to ``False``.
+``EXTJS4_DEBUG`` and ``EXTJS4_DEBUGFILE`` attributes from ``settings.py`` to
+your Django templates.
+
+
+``EXTJS4_DEBUG`` is useful if you want to be able to test your
+production ExtJS app on the Django test server, since setting ``DEBUG`` to
+``True`` disables ``staticfiles``, but setting ``EXTJS4_DEBUG`` only uses your
+``app-all.js`` instead of ``app.js`` and dynamic loading. If you add the
+template context, but do not set ``EXTJS4_DEBUG`` in ``settings.py``, it
+defaults to ``False``.
+
+``EXTJS4_DEBUGFILE`` can be used to configure the ExtJS bundle to load. It defaults
+to ``extjs4/ext-all-dev.js``, which is fast. ``ext-all-dev.js`` does not
+provide the best debugging experience, so you may want to use
+``extjs4/ext-dev.js`` instead, at least when you have a hard time debugging something.
 
 
 A generic view
