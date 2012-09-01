@@ -56,8 +56,8 @@ Template context
 ================
 
 The ``extjs4.context_processors.extjs4`` template context adds exports the
-``EXTJS4_DEBUG`` and ``EXTJS4_DEBUGFILE`` attributes from ``settings.py`` to
-your Django templates.
+``EXTJS4_DEBUG``, ``EXTJS4_DEBUGFILE`` and ``EXTJS4_PRODFILE`` attributes from
+``settings.py`` to your Django templates.
 
 
 ``EXTJS4_DEBUG`` is useful if you want to be able to test your
@@ -71,6 +71,10 @@ defaults to ``False``.
 to ``extjs4/ext-all-dev.js``, which is fast. ``ext-all-dev.js`` does not
 provide the best debugging experience, so you may want to use
 ``extjs4/ext-dev.js`` instead, at least when you have a hard time debugging something.
+
+``EXTJS4_PRODFILE`` is just like ``EXTJS4_DEBUGFILE``, but for production. It
+defaults to ``extjs4/ext.js``. This assumes that  you have built your app with
+``EXTJS4_DEBUGFILE="extjs4/ext-dev.js"``.
 
 
 A generic view

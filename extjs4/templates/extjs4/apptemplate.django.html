@@ -23,7 +23,12 @@
                     });
                 </script>
             {% else %}
-                <script type="text/javascript" src="{% static "extjs4/ext.js" %}"></script>
+                <script type="text/javascript" src="{% static EXTJS4_PRODFILE %}"></script>
+                <script type="text/javascript">
+                    Ext.Loader.setConfig({
+                        enabled: false
+                    });
+                </script>
             {% endif %}
         {% endblock %}
 
