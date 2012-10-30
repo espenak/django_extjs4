@@ -1,1 +1,1 @@
-version = '1.1.2_extjs4.1.1'
+version = '1.1.3_extjs4.1.1'
